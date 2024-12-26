@@ -1,0 +1,222 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Play", sans-serif;
+    background-color: #f9f9f9;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Шапка */
+header {
+    width: 100%;
+    background-color: #730000;
+    color: white;
+}
+
+.header-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; 
+    object-position: top;
+}
+.navbar {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.navbar li {
+    align-items: center;
+    display: block;
+    list-style: none;
+    margin-left: 20px;
+}
+.navbar li a {
+    color: white;
+    text-decoration: none;
+}
+.navbar li a:hover {
+    text-decoration: underline;
+}
+.navbar li a.active {
+    background-color: #ffffff;
+    color: #000000; 
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Главная секция */
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.line_block {
+    width: 150px;
+    height: 5px;
+    margin: 10px auto;
+    background-color: #ffcc00;
+    border-radius: 2px;
+}
+
+.hero h1 {
+    font-size: 24px;
+}
+.hero h2{
+    font-size: 20px;
+    color: #333;
+}
+
+/* Основное содержание */
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+.container {
+    flex: 3;
+}
+.content-image {
+    width: 40%; /* Изображение будет растягиваться на всю ширину блока */
+    height: auto; /* Высота будет изменяться пропорционально */
+    margin-bottom: 15px; /* Отступ между изображением и текстом */
+    border-radius: 8px; /* Скругленные углы, если нужно */
+}
+.item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item h2 {
+    font-size: 20px;
+}
+.item h3 {
+    font-size: 16px;
+    color: #999;
+}
+.item p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Боковая панель */
+.sidebar {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    margin-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul li span {
+    display: block;
+    font-size: 12px;
+    color: #999;
+}
+.side-video{
+    width: 100%; /* Изображение будет растягиваться на всю ширину блока */
+    height: auto; /* Высота будет изменяться пропорционально */
+    margin-bottom: 15px; /* Отступ между изображением и текстом */
+    border-radius: 8px; /* СкруглSенные углы*/
+}
+.side-image{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px; /* Отступ между изображением и текстом */
+    border-radius: 8px; /* СкруглSенные углы*/
+}
+.form_side {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Подвал */
+footer {
+    padding: 20px 0;
+    width: 100%;
+    padding: 20px; 
+    background-color: #590000;  
+}
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-columns div {
+    width: 30%;
+}
+.footer-columns h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: white
+}
+.footer-columns ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-columns ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+}
+.footer-columns ul li a {
+    color: wheat
+}
+/* Адаптация для небольших экранов */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Переход на вертикальный вид */
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Один блок в ряд на маленьком экране */
+    }
+
+    .sidebar {
+        position: relative; /* Перемещаем вниз на мобильных */
+        top: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
